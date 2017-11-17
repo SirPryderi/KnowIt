@@ -9,6 +9,13 @@
   &:last-of-type {
     border-radius: 0 0 .25rem .25rem;
   }
+
+  a {
+    color: black;
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
 .custom-control-indicator {
@@ -16,10 +23,10 @@
 }
 
 .progress-bar.run-animation {
- animation: bar-animation 1s 1;
+  animation: bar-animation 1s 1;
 }
 
-.prize-cup{
+.prize-cup {
   width: 35%;
 
   max-height: 400px;
