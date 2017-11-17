@@ -147,7 +147,13 @@ ChallengeController.prototype.answer = function (index) {
     this.answered = true;
 };
 
-function playSound(name){
+$('.material-icons:contains("favorite_border")').hover(function () {
+   $(this).html('favorite');
+}, function () {
+    $(this).html('favorite_border');
+});
+
+function playSound(name) {
     const audio = document.getElementById('audio-' + name);
     audio.play();
 }
