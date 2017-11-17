@@ -39,14 +39,15 @@ function ChallengeController() {
 
 ChallengeController.prototype.showReportShared = function () {
     $('#challenge-report').runBarAnimation();
+
+    $('#report-answered-questions-count').text(this.challenge.rightAnswers);
+
     openSection('#challenge-report');
 };
 
 ChallengeController.prototype.showVictory = function () {
     $('.game-over-element').hide();
     $('.victory-element').show();
-
-    $('#report-answered-questions-count').text(this.challenge.rightAnswers);
 
     this.showReportShared();
 
