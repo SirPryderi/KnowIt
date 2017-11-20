@@ -48,3 +48,11 @@ a.material-icons {
     width: 15%;
   }
 }
+
+#topics .list-group-item {
+  cursor: pointer;
+
+  &.active .text-muted {
+    color: white !important;
+  }
+}

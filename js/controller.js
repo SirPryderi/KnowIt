@@ -147,13 +147,20 @@ ChallengeController.prototype.answer = function (index) {
     this.answered = true;
 };
 
-$('.material-icons:contains("favorite_border")').hover(function () {
-   $(this).html('favorite');
-}, function () {
-    $(this).html('favorite_border');
-});
-
 function playSound(name) {
     const audio = document.getElementById('audio-' + name);
     audio.play();
 }
+
+$(function () {
+    $('.material-icons:contains("favorite_border")').hover(function () {
+        $(this).html('favorite');
+    }, function () {
+        $(this).html('favorite_border');
+    });
+
+    $('#topics').find('.list-group-item:not(.disabled)').click(function (e) {
+        $(this).toggleClass('active');
+        e.preventDefault();
+    });
+});
