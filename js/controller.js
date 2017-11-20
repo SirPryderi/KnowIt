@@ -59,6 +59,8 @@ ChallengeController.prototype.showReport = function () {
     $('.game-over-element').show();
 
     this.showReportShared();
+
+    playSound('gameover');
 };
 
 ChallengeController.prototype.getAnswer = function () {
