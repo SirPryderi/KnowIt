@@ -5,14 +5,16 @@ $('a:not(.collapsed)').click(function (e) {
     if (location.indexOf('#') === 0 && location.length > 1) {
         openSection(location);
 
-        $('.nav-item[data-page="' + location.substr(1) + '"]').addClass('active').siblings().removeClass('active');
-
         e.preventDefault();
     }
 });
 
 function openSection(name) {
     $('.container').attr('hidden', true);
+
+    $('.nav-item').removeClass('active');
+
+    $('.nav-item[data-page="' + name.substr(1) + '"]').addClass('active');
 
     $(name).attr('hidden', false);
 }
