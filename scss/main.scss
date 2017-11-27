@@ -56,3 +56,34 @@ a.material-icons {
     color: white !important;
   }
 }
+
+$footer-margin: 100px;
+$footer-height: 160px;
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: $footer-height + $footer-margin; /* Margin bottom by footer height */
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: $footer-height; /* Set the fixed height of the footer here */
+ // line-height: $footer-height; /* Vertically center the text there */
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+.container {
+  width: auto;
+}
